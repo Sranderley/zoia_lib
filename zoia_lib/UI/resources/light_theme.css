@@ -8,7 +8,8 @@ darkest
 #5f5f5f; - .text-editor-background  - text editor background
 #757575; - .primary-background      - scrollbar, qsplitter, main window
 #858585; - .header-background       - line-numbers, tabs, headers
-#a1a1a1; - .control-background      - controls
+#a1a1a1; - .light-backgroun         - other stuff
+#b2b2b2; - .control-background      - controls
 
 lightest
 
@@ -18,29 +19,112 @@ ____________________________________________________________________________
 
 */
 
-.font-color, .header, .info-viewer, QTabBar::tab, QHeaderView::section {
-	color: #333333;
-}
-.border-color, .header, .show-hide, QTabBar::tab, QHeaderView::section,
-QPushButton {
-	border-color: #4f4f4f;
-}
-.text-editor-background, .show-hide {
-	background: #5f5f5f;
-}
-.primary-background, QMainWindow, QScrollBar::handle, QSplitter::handle {
-	background: #757575;
-}
-.header-background, QTabBar::tab:!selected, .header, QHeaderView::section {
-	background: #858585;
-}
-.control-background, QTabBar::tab:selected, QTabBar::tab:hover,
-QPushButton {
-	background: #a1a1a1;
-}
-*[isHovered=false] {
-	background: #858585;
-}
-*[isHovered=true], QPushButton:hover {
-	background: #F2C202;
+QLabel,
+QMenuBar,
+QFontDialog,
+QLineEdit,
+QTabBar::tab,
+QHeaderView::section,
+QMenu::item,
+QMenuBar::item,
+QTableView,
+QStatusBar,
+QRadioButton,
+.font-color,
+.header,
+.info-viewer
+	{
+		color: #333333;
+	}
+
+QPushButton,
+QLineEdit,
+QHeaderView::section,
+QTabBar::tab,
+.border-color,
+.header
+	{
+		border-color: #4f4f4f;
+	}
+
+.text-editor-background
+	{
+		background-color: #5f5f5f;
+	}
+
+QLabel,
+QMainWindow,
+QMenu,
+QMenu::separator,
+QMenuBar,
+QMessageBox,
+QScrollBar::handle,
+.primary-background
+	{
+		background-color: #757575;
+	}
+
+QHeaderView::section,
+QTabBar::tab:!selected,
+.header,
+.header-background
+	{
+		background-color: #858585;
+	}
+	
+QFontDialog,
+QInputDialog,
+QMenu::item,
+QHeaderView::section:selected,
+QTabBar::tab:selected,
+QTabBar::tab:hover,
+QTabWidget::pane,
+QSplitter:handle,
+QWidget#widget_9,
+QWidget#tab_ps,
+QWidget#tab_sd,
+QWidget#tab_bank
+	{
+		background-color: #a1a1a1;
+	}
+
+QPushButton,
+QLineEdit,
+QTreeView,
+QTextBrowser,
+QTableWidget,
+.control-background
+	{
+		background-color: #b2b2b2;
+	}
+
+QTreeView,
+QTableWidget
+	{
+		alternate-background-color: #a1a1a1;
+	}
+
+*[isHovered=true],
+QPushButton:hover,
+QMenuBar::item:hover,
+QMenuBar::item:selected,
+QMenuBar::item:pressed,
+QMenu::item:selected,
+QTableView::item:selected,
+QTableCornerButton::section
+	{
+		background-color: #F2C202;
+	}
+
+*[isHovered=false]
+	{
+		background-color: #858585;
+	}
+
+QToolTip {
+    alternate-background-color: #3b4045;
+    background-color: #31363b;
+    border: .1ex solid #eff0f1;
+    color: #eff0f1;
+    padding: .5ex;
 }

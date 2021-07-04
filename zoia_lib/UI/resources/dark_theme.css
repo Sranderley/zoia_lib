@@ -47,7 +47,6 @@ QTabBar::tab,
 		border-color: #4f4f4f;
 	}
 
-QMenu::separator,
 .text-editor-background
 	{
 		background-color: #5f5f5f;
@@ -56,10 +55,10 @@ QMenu::separator,
 QLabel,
 QMainWindow,
 QMenu,
+QMenu::separator,
 QMenuBar,
 QMessageBox,
 QScrollBar::handle,
-QSplitter::handle,
 .primary-background
 	{
 		background-color: #757575;
@@ -80,6 +79,7 @@ QHeaderView::section:selected,
 QTabBar::tab:selected,
 QTabBar::tab:hover,
 QTabWidget::pane,
+QSplitter:handle,
 QWidget#widget_9,
 QWidget#tab_ps,
 QWidget#tab_sd,
@@ -90,10 +90,18 @@ QWidget#tab_bank
 
 QPushButton,
 QLineEdit,
-QTreeView, QTextBrowser, QTableView,
+QTreeView,
+QTextBrowser,
+QTableWidget,
 .control-background
 	{
 		background-color: #b2b2b2;
+	}
+
+QTreeView,
+QTableWidget
+	{
+		alternate-background-color: #a1a1a1;
 	}
 
 *[isHovered=true],

@@ -309,11 +309,12 @@ class ZOIALibrarianUtil:
         if self.row_inversion:
             self.ui.table_PS.setAlternatingRowColors(True)
             self.ui.table_local.setAlternatingRowColors(True)
-            self.ui.table_sd_left.setAlternatingRowColors(False)
-            self.ui.table_sd_right.setAlternatingRowColors(False)
-            self.ui.table_bank_local.setAlternatingRowColors(False)
-            self.ui.table_bank_left.setAlternatingRowColors(False)
-            self.ui.table_bank_right.setAlternatingRowColors(False)
+            self.ui.table_sd_left.setAlternatingRowColors(True)
+            self.ui.table_sd_right.setAlternatingRowColors(True)
+            self.ui.table_bank_local.setAlternatingRowColors(True)
+            self.ui.table_bank_left.setAlternatingRowColors(True)
+            self.ui.table_bank_right.setAlternatingRowColors(True)
+            self.ui.sd_tree.setAlternatingRowColors(True)
         else:
             self.ui.table_PS.setAlternatingRowColors(False)
             self.ui.table_local.setAlternatingRowColors(False)
@@ -322,6 +323,7 @@ class ZOIALibrarianUtil:
             self.ui.table_bank_local.setAlternatingRowColors(False)
             self.ui.table_bank_left.setAlternatingRowColors(False)
             self.ui.table_bank_right.setAlternatingRowColors(False)
+            self.ui.sd_tree.setAlternatingRowColors(False)
 
         self.row_inversion = not self.row_inversion
 

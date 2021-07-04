@@ -15,6 +15,15 @@ UI Structure CSS Rules
 */
 
 /*
+Menus
+======================
+*/
+QMenu::separator {
+	height: 2px;
+}
+
+
+/*
 Scroll Bars
 ======================
 This set of rules creates minimalistic Scroll Bars
@@ -89,6 +98,9 @@ QTabBar::tab:!selected {
 	margin-top: 5px;
 	height: 12px;
 }
+QTabBar::tab:selected {
+	height: 17px;
+}
 
 /*
 Lists
@@ -120,6 +132,16 @@ Headers
 .header, QHeaderView::section:last {
 	border-right: 0px;
 }
+/*
+Tables
+======================
+*/
+QTableWidget {
+	outline: 0;
+}
+QTableWidget::item:focus {
+	border: 2px solid red;
+}
 
 /*
 Buttons
@@ -128,7 +150,7 @@ Buttons
 QPushButton {
 	border-style: solid;
 	border-width: 2px;
-	border-radius: 5px;
+	border-radius: 3px;
 	padding: 4px;
 }
 
