@@ -21,33 +21,26 @@ ____________________________________________________________________________
 .font-color, .header, .info-viewer, QTabBar::tab, QHeaderView::section {
 	color: #333333;
 }
-.border-color, .header, .show-hide, QTabBar::tab, QHeaderView::section {
+.border-color, .header, .show-hide, QTabBar::tab, QHeaderView::section,
+QPushButton {
 	border-color: #4f4f4f;
 }
 .text-editor-background, .show-hide {
 	background: #5f5f5f;
 }
-.primary-background, QScrollBar::handle, QSplitter::handle {
+.primary-background, QMainWindow, QScrollBar::handle, QSplitter::handle {
 	background: #757575;
 }
 .header-background, QTabBar::tab:!selected, .header, QHeaderView::section {
 	background: #858585;
 }
-.control-background, QTabBar::tab:selected, QTabBar::tab:hover {
+.control-background, QTabBar::tab:selected, QTabBar::tab:hover,
+QPushButton {
 	background: #a1a1a1;
-}
-.show-hide {
-	color: #a1a1a1;
-}
-
-#LineNumbers {
-	min-width: 20px;
-	width: 10px;
-	background: #858585;
 }
 *[isHovered=false] {
 	background: #858585;
 }
-*[isHovered=true] {
+*[isHovered=true], QPushButton:hover {
 	background: #F2C202;
 }

@@ -84,12 +84,16 @@ QTabBar::tab {
 	padding-bottom: 4px;
 	height: 14px;
 }
+/* make non-selected tabs look smaller */
 QTabBar::tab:!selected {
-	/* make non-selected tabs look smaller */
-	margin-top: 2px;
+	margin-top: 5px;
 	height: 12px;
 }
 
+/*
+Lists
+======================
+*/
 QListView::item:hover,
 QListView::item:selected,
 QListView {
@@ -97,11 +101,13 @@ QListView {
 	background: transparent;
 	selection-background-color: transparent;
 	show-decoration-selected: 0;
-	color: #333333;
 	outline: none;
 }
 
-/* Default Styling for application headers */
+/*
+Headers
+======================
+*/
 .header, QHeaderView::section {
 	padding: 4px;
 	height: 12px;
@@ -115,21 +121,31 @@ QListView {
 	border-right: 0px;
 }
 
+/*
+Buttons
+======================
+*/
 QPushButton {
-	background: #a1a1a1;
 	border-style: solid;
-	border-color: #4f4f4f;
 	border-width: 2px;
-	border-radius: 10px;
+	border-radius: 5px;
+	padding: 4px;
 }
 
-QPushButton:hover {
-	background: #F2C202;
+/*
+Line Edit
+======================
+
+*/
+QLineEdit {
+	border-bottom: 2px;
+	border-style: solid;
+	padding: 2px;
 }
 
 /*
 Border options
-_____________________________________________________
+======================
 */
 .no-border {
 	border: none;
@@ -153,10 +169,18 @@ _____________________________________________________
 
 /*
 Padding options
-_____________________________________________________
+======================
 */
 .padding-all {
 	padding: 4px;                
+}
+
+/*
+Position options
+======================
+*/
+.absolute, QTabWidget::pane {
+    position: absolute;
 }
 
 /*
