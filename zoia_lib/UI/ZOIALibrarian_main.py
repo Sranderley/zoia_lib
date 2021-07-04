@@ -306,6 +306,8 @@ class ZOIALibrarianMain(QMainWindow):
         self.ui.delete_folder_sd_btn.clicked.connect(self.sd.delete_sd_item)
         self.ui.set_export_dir_btn.clicked.connect(self.sd.export_path)
         self.ui.actionToggle_Dark_Mode_2.triggered.connect(self.util.toggle_dark)
+        self.ui.actionSet_new_dark_theme.triggered.connect(self.util.toggle_new_dark_theme)
+        self.ui.actionSet_new_light_theme.triggered.connect(self.util.toggle_new_light_theme)
         self.ui.btn_dwn_all.clicked.connect(self.ps.download_all_thread)
         self.ui.btn_show_routing.clicked.connect(self.local.setup_exp)
         self.ui.back_btn.clicked.connect(self.local.viz_reset)

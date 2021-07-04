@@ -1,0 +1,47 @@
+/*
+Background colors
+___________________________________________________________________________
+darkest
+
+#333333; - .font-color              - font
+#4f4f4f; - .border-color            - borders
+#5f5f5f; - .text-editor-background  - text editor background
+#757575; - .primary-background      - scrollbar, qsplitter, main window
+#858585; - .header-background       - line-numbers, tabs, headers
+#a1a1a1; - .control-background      - controls
+
+lightest
+
+Accent colors
+____________________________________________________________________________
+#F2C202; - gold
+
+*/
+
+.font-color, .header, .info-viewer, QTabBar::tab, QHeaderView::section {
+	color: #333333;
+}
+.border-color, .header, .show-hide, QTabBar::tab, QHeaderView::section {
+	border-color: #4f4f4f;
+}
+.text-editor-background, .show-hide {
+	background: #5f5f5f;
+}
+.primary-background, QScrollBar::handle, QSplitter::handle {
+	background: #757575;
+}
+.header-background, QTabBar::tab:!selected, .header, QHeaderView::section {
+	background: #858585;
+}
+.control-background, QTabBar::tab:selected, QTabBar::tab:hover {
+	background: #a1a1a1;
+}
+.show-hide {
+	color: #a1a1a1;
+}
+*[isHovered=false] {
+	background: #858585;
+}
+*[isHovered=true] {
+	background: #F2C202;
+}

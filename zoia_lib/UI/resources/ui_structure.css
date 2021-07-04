@@ -1,0 +1,182 @@
+/*
+UI Structure CSS Rules
+======================
+- This document contains sizing and structural rules to apply to UI elements
+- This document is organized into sections which define all attributes of a
+  PyQt classes or sets of related PyQt classes
+- Where possible, selectors should reference the PyQt class directly
+- For CSS attributes which might be applied more generally to UI elements,
+  dot-selector classes can be used with hyphenated descriptors
+	e.g. ".no-border" selector includes the rule "border: None"
+
+  This allows for developers to assign these rules generally with the setProperty method
+	e.g. "self.mainWidget.setProperty('class', 'no-border')"
+
+*/
+
+/*
+Scroll Bars
+======================
+This set of rules creates minimalistic Scroll Bars
+*/
+QScrollBar:vertical {
+	width: 14px;
+	margin: 3px;
+}
+QScrollBar:horizontal {
+	height: 14px;
+	margin: 3px;
+}
+QScrollBar {
+	background: transparent;
+}
+QScrollBar::handle {
+	border-radius: 4px;
+}
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal,
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+	height: 0px;
+	width: 0px;
+	subcontrol-origin: margin;
+}
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal,
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+	background: none;
+}
+
+/*
+Splitters
+======================
+This set of rules locks the width of the splitter handles to 10px
+wide for horizontal splitters and 10px high for vertical splitters
+*/
+QSplitter::handle:horizontal {
+	min-width: 10px;
+	width: 10px;
+	max-width: 10px;
+}
+QSplitter::handle:vertical {
+	min-height: 10px;
+	height: 10px;
+	max-height: 10px;
+}
+
+/*
+Tab Bar
+======================
+*/
+QTabBar {
+	font-weight: bold;
+}
+QTabBar::tab:first {
+	margin-left: 10px;
+}
+QTabBar::tab {
+	border: 2px;
+	border-style: solid;
+	border-bottom: none;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	min-width: 200px;
+	padding-left: 8px;
+	padding-top: 4px;
+	padding-right: 6px;
+	padding-bottom: 4px;
+	height: 14px;
+}
+QTabBar::tab:!selected {
+	/* make non-selected tabs look smaller */
+	margin-top: 2px;
+	height: 12px;
+}
+
+QListView::item:hover,
+QListView::item:selected,
+QListView {
+	border: none;
+	background: transparent;
+	selection-background-color: transparent;
+	show-decoration-selected: 0;
+	color: #333333;
+	outline: none;
+}
+
+/* Default Styling for application headers */
+.header, QHeaderView::section {
+	padding: 4px;
+	height: 12px;
+	border: 0px;
+	border-right: 1px;
+	border-style: solid;
+	font-weight: bold;
+	font-size: 11px;
+}
+.header, QHeaderView::section:last {
+	border-right: 0px;
+}
+
+QPushButton {
+	background: #a1a1a1;
+	border-style: solid;
+	border-color: #4f4f4f;
+	border-width: 2px;
+	border-radius: 10px;
+}
+
+QPushButton:hover {
+	background: #F2C202;
+}
+
+/*
+Border options
+_____________________________________________________
+*/
+.no-border {
+	border: none;
+}
+.bordered {
+	border: 3px;
+	border-style: solid;
+}
+.no-left-border {
+	border-left: none;
+}
+.no-top-border {
+	border-top: none;
+}
+.no-right-border {
+	border-right: none;
+}
+.no-bottom-border {
+	border-bottom: none;
+}
+
+/*
+Padding options
+_____________________________________________________
+*/
+.padding-all {
+	padding: 4px;                
+}
+
+/*
+There is a bug in PyQt (or an OS issue?)
+in which rounded corners don't clip correctly,
+leaving a corner of white background color visible. 
+.round-all {
+	border-radius: 6px;
+	background-clip: margin;
+}
+.round-top-left {
+	border-top-left-radius: 6px;
+}
+.round-top-right {
+	border-top-right-radius: 6px;
+}
+.round-bottom-right {
+	border-bottom-right-radius: 6px;
+}
+.round-bottom-left {
+	border-bottom-left-radius: 6px;
+}
+*/

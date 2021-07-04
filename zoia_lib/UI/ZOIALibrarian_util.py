@@ -264,6 +264,42 @@ class ZOIALibrarianUtil:
         app.setStyleSheet(data)
         self.change_font(self.font)
 
+    def toggle_new_dark_theme(self):
+        """
+        Because we are setting the stylesheet at the application level, both structural
+        and stylistic CSS rules must be applied
+
+        We'll first grab the structural rules, then append to those the stylistic rules
+        for the dark theme
+        """
+        app = QApplication.instance()
+        with open(os.path.join("zoia_lib", "UI", "resources", "ui_structure.css"), "r") as f:
+            css_structure = f.read()
+
+        with open(os.path.join("zoia_lib", "UI", "resources", "dark_theme.css"), "r") as f:
+            css_theme = f.read()
+
+        app.setStyleSheet(css_structure + "\n" + css_theme)
+        self.change_font(self.font)
+
+    def toggle_new_light_theme(self):
+        """
+        Because we are setting the stylesheet at the application level, both structural
+        and stylistic CSS rules must be applied
+
+        We'll first grab the structural rules, then append to those the stylistic rules
+        for the light theme
+        """
+        app = QApplication.instance()
+        with open(os.path.join("zoia_lib", "UI", "resources", "ui_structure.css"), "r") as f:
+            css_structure = f.read()
+
+        with open(os.path.join("zoia_lib", "UI", "resources", "light_theme.css"), "r") as f:
+            css_theme = f.read()
+
+        app.setStyleSheet(css_structure + "\n" + css_theme)
+        self.change_font(self.font)
+
     def row_invert(self):
         """Either enables of disables alternating row colours for
         tables depending on the previous state of the tables.
