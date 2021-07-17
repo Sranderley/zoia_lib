@@ -142,3 +142,6 @@ dmypy.json
 
 # Ignore My TODO list
 TODO.txt
+
+# Ignore the Source Code from the guys at Empress
+documentation/zoia_source_code/*

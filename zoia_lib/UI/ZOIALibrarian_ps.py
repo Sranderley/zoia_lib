@@ -230,7 +230,7 @@ class ZOIALibrarianPS(QMainWindow):
         """
 
         # Prepare the button.
-        dwn = QPushButton("Download \n patch", self)
+        dwn = QPushButton("Download", self)
         dwn.setObjectName(idx)
         dwn.setFont(self.ui.table_PS.horizontalHeader().font())
         dwn.clicked.connect(self.initiate_download)

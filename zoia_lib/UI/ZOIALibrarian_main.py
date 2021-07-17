@@ -182,6 +182,9 @@ class ZOIALibrarianMain(QMainWindow):
             self.ui.table_PS.setColumnWidth(1, self.ps_sizes["col_1"])
             self.ui.table_PS.setColumnWidth(2, self.ps_sizes["col_2"])
             self.ui.table_PS.setColumnWidth(3, self.ps_sizes["col_3"])
+            # TODO Finish the conversion from Radio Buttons to Table Cell selectors
+
+            # self.ui.table_PS.clicked.connect(self.display_patch_info)
 
             # Local Table
             # self.ui.splitter_local.setSizes([self.local_sizes["split_left"],

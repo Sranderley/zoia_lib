@@ -19,6 +19,7 @@ ____________________________________________________________________________
 
 */
 
+/* DARK TEXT COLOR */
 QLabel,
 QMenuBar,
 QFontDialog,
@@ -30,9 +31,13 @@ QMenuBar::item,
 QTableView,
 QStatusBar,
 QRadioButton,
-.font-color,
-.header,
-.info-viewer
+.dark-font-color
+	{
+		color: #333333;
+	}
+
+/* LIGHT TEXT COLOR */
+.light-font-color
 	{
 		color: #333333;
 	}

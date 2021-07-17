@@ -3,14 +3,6 @@ Background colors
 ___________________________________________________________________________
 darkest
 
-Goal
-5 Distinct UI Background colors
-
-3 Distinct UI font colors
-
-1 Distinct UI accent color
-
-
 #333333; - .font-color              - font
 #4f4f4f; - .border-color            - borders
 #5f5f5f; - .text-editor-background  - text editor background
@@ -41,17 +33,14 @@ QMenuBar::item,
 QTabBar::tab,
 .light-font-color
 	{
-		color: #E5E5E5;
+		color: #FFEDBA;
 	}
 
 /* DARK TEXT COLOR */
-QLineEdit,
-QTreeView,
-QTextBrowser,
-QTableWidget,
+QPushButton,
 .dark-font-color
 	{
-		color: #303030;
+		color: #F2FCFE;
 	}
 
 /* BORDER COLOR */
@@ -62,7 +51,7 @@ QTabBar::tab,
 .border-color,
 .header
 	{
-		border-color: #000000;
+		border-color: #06242B;
 	}
 
 /* DARKEST BACKGROUND COLOR */
@@ -75,7 +64,7 @@ QMessageBox,
 QScrollBar::handle,
 .primary-background
 	{
-		background-color: #14213D;
+		background-color: #0A4A59;
 	}
 
 /* MIDDLE-DARK BACKGROUND COLOR */
@@ -84,10 +73,10 @@ QTabBar::tab:!selected,
 .header,
 .header-background
 	{
-		background-color: #233A6C;
+		background-color: #1A6070;
 	}
 	
-/* MIDDLE BACKGROUND COLOR */
+/* MIDDLE-LIGHT BACKGROUND COLOR */
 QFontDialog,
 QInputDialog,
 QMenu::item,
@@ -101,24 +90,24 @@ QWidget#tab_ps,
 QWidget#tab_sd,
 QWidget#tab_bank
 	{
-		background-color: #435A8C;
+		background-color: #2E7282;
 	}
-
-/* MIDDLE-LIGHT BACKGROUND COLOR */
-QPushButton
+QTreeView,
+QTableWidget
 	{
-		background-color: #637AAC;
+		alternate-background-color: #2E7282;
 	}
 
-/* LIGHTEST BACKGROUND COLORS */
+
+/* LIGHTEST BACKGROUND COLOR */
+QPushButton,
 QLineEdit,
 QTreeView,
 QTextBrowser,
 QTableWidget,
 .control-background
 	{
-		alternate-background-color: #637AAC;
-		background-color: #839ACC;
+		background-color: #4A8998;
 	}
 
 
@@ -132,5 +121,5 @@ QMenu::item:selected,
 QTableView::item:selected,
 QTableCornerButton::section
 	{
-		background-color: #FCA311;
+		background-color: #ED707C;
 	}
